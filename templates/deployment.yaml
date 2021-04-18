@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: graf
+  name: graf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graf
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: graf
+    spec:
+      containers:
+      - image: hackcoderr/grafana:v1
+        name: grafana
+        resources: {}
+status: {}
